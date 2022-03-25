@@ -31,7 +31,7 @@ print(readline(n,file))
 filename=input('Wrire your file name:')
 file='C:/temp/'+filename
 def longest_words(file):
-   
+    sortedwords=[]
     try:
         fhand=open(file)  
         data=fhand.read()
@@ -47,8 +47,8 @@ def longest_words(file):
         return(sortedwords[:5])
        
     except:
-         return('"'+"file not found"+'"')
-    
+         print('"'+"file not found"+'"')
+         return(sortedwords)
       
     
 print(longest_words(file))
